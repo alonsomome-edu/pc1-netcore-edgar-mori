@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Efrain Bautista</Authors>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Customers\Infra\NSB\**" />
+    <EmbeddedResource Remove="Customers\Infra\NSB\**" />
+    <None Remove="Customers\Infra\NSB\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Banking.Net.Common" Version="1.0.0" />
+    <PackageReference Include="Banking.Net.Transactions.Messages" Version="1.0.0" />
+    <PackageReference Include="FluentNHibernate" Version="2.1.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="NServiceBus.NHibernate" Version="8.4.3" />
+  </ItemGroup>
+
+</Project>
